@@ -1,8 +1,8 @@
 //3 - Crie uma classe Musica com atributos titulo, artista, anoLancamento, avaliacao e numAvaliacoes, e métodos para
 // exibir a ficha técnica, avaliar a música e calcular a média de avaliações.
 public class Musica {
-    String titulo;
-    String artista;
+    private String titulo;
+    private String artista;
     int anoLancamento;
     double somaAvaliacoes;
     int numAvaliacoes;
@@ -25,5 +25,26 @@ public class Musica {
     double calcularMediaAvaliacoes (){
         mediaAvaliacao = somaAvaliacoes / numAvaliacoes;
         return mediaAvaliacao;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getArtista() {
+        return artista;
+    }
+
+    public void setArtista(String artista) {
+        this.artista = artista;
+    }
+
+    public void exibirDetalhes(){
+        System.out.println("Titulo: " + this.titulo);
+        System.out.println("Artista: " + this.artista);
     }
 }
